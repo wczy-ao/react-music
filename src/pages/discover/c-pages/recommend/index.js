@@ -1,22 +1,24 @@
-import React, { memo, useEffect } from 'react'
-import { useDispatch, useSelector, shallowEqual } from 'react-redux'
+import React, { memo } from 'react'
 
-import { getTopBannerActions } from './store/actionCreators'
+import { RecommendWrapper, Content, RecommendLeft } from './style'
+
+import WanTopBanner from './c-cpns/top-banner'
+import WanAlbum from './c-cpns/new-album'
+import WanRecommend from './c-cpns/hot-recommend'
 
 const WanRecom = memo((props) => {
 
-  const dispatch = useDispatch()
-  const { topBanners } = useSelector((state) => ({
-    topBanners: state.recommend.topBanners
-  }), shallowEqual)
-
-  useEffect(() => {
-    dispatch(getTopBannerActions())
-  }, [dispatch]);
-
-
   return (
-    <div>WanRecom；length:{topBanners.length}</div>
+    <RecommendWrapper>
+      <WanTopBanner />
+      <Content className='wrap-v2'>
+        <RecommendLeft>
+          <WanRecommend />
+          <WanAlbum />
+        </RecommendLeft>
+
+      </Content>
+    </RecommendWrapper>
   )
 })
 
