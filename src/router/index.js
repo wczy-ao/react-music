@@ -24,11 +24,11 @@ const routes = [
   {
     path: "/discover",
     component: WanDiscover,
-    routes:[
+    routes: [
       {
-        path:"/discover",
-        exact:true,
-        render:()=>{
+        path: "/discover",
+        exact: true,
+        render: () => {
           <Redirect to="/discover/recommend" />
         }
       },

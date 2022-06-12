@@ -5,6 +5,7 @@ import { RecommendWrapper, Content, RecommendLeft } from './style'
 import WanTopBanner from './c-cpns/top-banner'
 import WanAlbum from './c-cpns/new-album'
 import WanRecommend from './c-cpns/hot-recommend'
+import WanRecommendRank from './recommend-ranking'
 
 const WanRecom = memo((props) => {
 
@@ -15,6 +16,7 @@ const WanRecom = memo((props) => {
         <RecommendLeft>
           <WanRecommend />
           <WanAlbum />
+          <WanRecommendRank />
         </RecommendLeft>
 
       </Content>

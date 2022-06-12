@@ -8,6 +8,7 @@ import store from './store';
 
 import WanFooter from '@/components/app-footer'
 import WanHeader from '@/components/app-header'
+import WanPlayerBar from './pages/player/app-player-bar';
 
 const App = memo(() => {
   return (
@@ -16,9 +17,9 @@ const App = memo(() => {
         <WanHeader />
         {renderRoutes(routes)}
         <WanFooter />
+        <WanPlayerBar />
       </HashRouter>
     </Provider>
-
   )
 })
 
